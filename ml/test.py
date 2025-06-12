@@ -1,9 +1,9 @@
 import os
 from ultralytics import YOLO
 
-EPOCHS = 50
+NAME = 'test_1'
 
-model = YOLO('yolo11n.pt')
+model = YOLO(os.path.join(os.path.dirname(__file__), 'train', NAME + '_4', 'weights', 'best.pt'))
 
-results = model(os.path.join(os.path.dirname(__file__), 'models', 'final', f'{EPOCHS}_epochs.onnx'))
-results[0].save(filename=os.path.join(os.path.dirname(__file__), 'test', f'{EPOCHS}_epochs.png'))
+results = model(os.path.join(os.path.dirname(__file__), 'test', 'test.jpg'))
+results[0].save(filename=os.path.join(os.path.dirname(__file__), 'test', NAME + '.png'))
