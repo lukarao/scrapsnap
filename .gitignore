@@ -1,1 +1,5 @@
 ml/train
+ml/dataset/coco/batch_*
+ml/dataset/yolo/test
+ml/dataset/yolo/train
+ml/dataset/yolo/val
