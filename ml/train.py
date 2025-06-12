@@ -1,7 +1,7 @@
 import os
 from ultralytics import YOLO
 
-NAME = 'test_1'
+NAME = 'test_2'
 
 if __name__ == '__main__':
     os.chdir(os.path.join(os.path.dirname(__file__), 'models', 'pretrained'))
@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     model.train(
         data=os.path.join(os.path.dirname(__file__), 'dataset', 'yolo', 'data.yaml'),
-        epochs=10,
+        epochs=100,
         batch=64,
         imgsz=640,
         project=os.path.join(os.path.dirname(__file__), 'train'),
