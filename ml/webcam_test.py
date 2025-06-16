@@ -4,7 +4,7 @@ import cv2
 from ultralytics import YOLO
 
 NAME = 'v1'
-confidence_threshold = 0.25
+confidence_threshold = 0.5
 
 weights_path = glob.glob(os.path.join(os.path.dirname(__file__), 'train', NAME + '*', 'weights', 'best.pt'))[0]
 model = YOLO(weights_path)
@@ -15,7 +15,7 @@ while True:
     success, frame = cap.read()
 
     if success:
-        results = model(frame, conf=confidence_threshold)
+        results = model(frame, conf=confidence_threshold, max_det=1)
 
         annotated_frame = results[0].plot()
 
