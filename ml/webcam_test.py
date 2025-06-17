@@ -3,8 +3,8 @@ import os
 import cv2
 from ultralytics import YOLO
 
-NAME = 'v1'
-confidence_threshold = 0.5
+NAME = 'v2'
+confidence_threshold = 0.7
 
 weights_path = glob.glob(os.path.join(os.path.dirname(__file__), 'train', NAME + '*', 'weights', 'best.pt'))[0]
 model = YOLO(weights_path)

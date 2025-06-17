@@ -1,20 +1,22 @@
 import os
 from ultralytics import YOLO
 
-NAME = 'test_2'
+NAME = 'v2'
 
 if __name__ == '__main__':
     os.chdir(os.path.join(os.path.dirname(__file__), 'models', 'pretrained'))
 
-    model = YOLO(os.path.join(os.path.dirname(__file__), 'models', 'pretrained', 'yolo11n-seg.pt'))
+    model = YOLO(os.path.join(os.path.dirname(__file__), 'models', 'pretrained', 'yolo11n.pt'))
 
     model.train(
         data=os.path.join(os.path.dirname(__file__), 'dataset', 'yolo', 'data.yaml'),
         epochs=100,
-        batch=64,
+        batch=-1,
         imgsz=640,
+        device=-1,
         project=os.path.join(os.path.dirname(__file__), 'train'),
-        name=NAME + '_')
+        name=NAME + '_'
+    )
 
     model.val(project=os.path.join(os.path.dirname(__file__), 'val'))
 
