@@ -1,5 +1,6 @@
 import glob
 import os
+
 from ultralytics import YOLO
 
 NAME = 'v2'
