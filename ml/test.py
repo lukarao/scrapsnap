@@ -3,7 +3,7 @@ import os
 
 from ultralytics import YOLO
 
-NAME = 'v2'
+NAME = 'v3'
 
 weights_path = glob.glob(os.path.join(os.path.dirname(__file__), 'train', NAME + '*', 'weights', 'best.pt'))[0]
 model = YOLO(weights_path)

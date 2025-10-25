@@ -1,15 +1,14 @@
-import glob
 import os
 
 import cv2
 
 from ultralytics import YOLO
 
-NAME = 'v2'
+NAME = 'v3'
 confidence_threshold = 0.7
 
-weights_path = glob.glob(os.path.join(os.path.dirname(__file__), 'train', NAME + '*', 'weights', 'best.pt'))[0]
-model = YOLO(weights_path)
+model_path = os.path.join(os.path.dirname(__file__), 'models', 'final', NAME + '.onnx')
+model = YOLO(model_path, task='detect')
 
 cap = cv2.VideoCapture(0)
 
