@@ -16,7 +16,6 @@ if __name__ == '__main__':
 		epochs=300,
 		patience=50,
 		batch=-1,
-		imgsz=640,
 		device=-1,
 		project=os.path.join(os.path.dirname(__file__), 'train'),
 		name=NAME + '_'
@@ -24,7 +23,7 @@ if __name__ == '__main__':
 
 	model.val(project=os.path.join(os.path.dirname(__file__), 'val'))
 
-	export_path = model.export(format='onnx', opset=21, data=dataset)
+	export_path = model.export(format='onnx', opset=21, nms=True, data=dataset)
 
 	if 'test' in NAME:
 		os.rename(export_path, os.path.join(os.path.dirname(__file__), 'models', 'test', NAME + '.onnx'))
