@@ -32,14 +32,14 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	width: 80vw;
-	height: 80vw;
+	width: 80vmin;
+	height: 80vmin;
 
 	/* https://stackoverflow.com/a/61913549 */
-	--s: 10vw;
+	--s: 10vmin;
 	padding: 1px;
-	border: 1.25vw solid #fff;
-	border-radius: 5vw;
+	border: 1.25vmin solid #fff;
+	border-radius: 5vmin;
 	mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
 			calc(100% - var(--s)) calc(100% - var(--s)),
 		linear-gradient(#000 0 0) content-box;
@@ -51,7 +51,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	gap: 5vw;
+	gap: 5vmin;
 
 	position: absolute;
 	top: 90%;
@@ -60,10 +60,10 @@ body {
 }
 
 button {
-	width: 14vw;
-	height: 14vw;
+	width: 14vmin;
+	height: 14vmin;
 
-	padding: 2vw;
+	padding: 2vmin;
 
 	border: none;
 	border-radius: 50%;
