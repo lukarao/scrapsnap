@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
 		/>
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,13 +15,25 @@
 		<link rel="manifest" href="manifest.json" />
 		<title>ScrapSnap</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="https://unpkg.com/lucide@latest"></script>
 		<script type="module" src="main.js" defer></script>
 	</head>
 
 	<body>
 		<div id="overlay"></div>
+		<div id="buttons">
+			<button id="flashlight">
+				<i data-lucide="flashlight" class="button"></i>
+			</button>
+			<button id="flip">
+				<i data-lucide="refresh-cw" class="button"></i>
+			</button>
+			<button id="menu">
+				<i data-lucide="menu" class="button"></i>
+			</button>
+		</div>
 		<div id="video-container">
-			<video id="video" autoplay playsinline></video>
+			<video id="video" playsinline></video>
 		</div>
 	</body>
 </html>

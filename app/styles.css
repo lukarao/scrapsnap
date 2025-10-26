@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+body {
+	background-color: #000;
+}
+
 html,
 body {
 	overscroll-behavior: none;
@@ -34,9 +38,44 @@ body {
 	/* https://stackoverflow.com/a/61913549 */
 	--s: 10vw;
 	padding: 1px;
-	border: 1.25vw solid #ffffff;
+	border: 1.25vw solid #fff;
 	border-radius: 5vw;
 	mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
 			calc(100% - var(--s)) calc(100% - var(--s)),
 		linear-gradient(#000 0 0) content-box;
+}
+
+#buttons {
+	z-index: 1;
+
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 5vw;
+
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+button {
+	width: 14vw;
+	height: 14vw;
+
+	padding: 2vw;
+
+	border: none;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 25%);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button * {
+	stroke: #fff;
+	width: 80%;
+	height: 80%;
 }
