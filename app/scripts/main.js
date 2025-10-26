@@ -1,10 +1,21 @@
+import { processFrame } from './ml.js';
+
 import {
 	createIcons,
 	Flashlight,
 	FlashlightOff,
 	RefreshCw,
 	Menu,
-} from 'https://esm.sh/lucide';
+} from 'https://cdn.jsdelivr.net/npm/lucide/+esm';
+
+const icons = {
+	icons: {
+		Flashlight,
+		FlashlightOff,
+		RefreshCw,
+		Menu,
+	},
+};
 
 // camera functionality
 const video = document.getElementById('video');
@@ -16,6 +27,10 @@ async function getCamera(facingMode) {
 	});
 	video.srcObject = mediaStream;
 	video.play();
+
+	// initialize ml frame processing
+	video.requestVideoFrameCallback(processFrame);
+
 	track = mediaStream.getVideoTracks()[0];
 }
 
@@ -27,10 +42,10 @@ function updateFlashlightButton() {
 	if (torch) {
 		flashlight.innerHTML =
 			'<i data-lucide="flashlight-off" class="button"></i>';
-		createIcons({ icons: { FlashlightOff } });
+		createIcons(icons);
 	} else {
 		flashlight.innerHTML = '<i data-lucide="flashlight" class="button"></i>';
-		createIcons({ icons: { Flashlight } });
+		createIcons(icons);
 	}
 }
 
@@ -63,5 +78,5 @@ document.getElementById('menu').addEventListener('click', () => {
 });
 
 // initialization
-createIcons({ icons: { Flashlight, RefreshCw, Menu } });
-getVideo(facingMode);
+createIcons(icons);
+getCamera(facingMode);
