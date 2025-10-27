@@ -14,11 +14,6 @@ const session = await InferenceSession.create(
 	}
 );
 
-const video = document.getElementById('video');
-const ctx = document
-	.getElementById('canvas')
-	.getContext('2d', { willReadFrequently: true });
-
 // https://onnxruntime.ai/docs/tutorials/web/classify-images-nextjs-github-template.html
 function imageDataToTensor(image, dims) {
 	// get buffer data from image and create R, G, and B arrays.
@@ -53,6 +48,11 @@ function imageDataToTensor(image, dims) {
 	return inputTensor;
 }
 
+const video = document.getElementById('video');
+const ctx = document
+	.getElementById('canvas')
+	.getContext('2d', { willReadFrequently: true });
+const overlay = document.getElementById('overlay');
 const confidenceThreshold = 0.7;
 
 export function processFrame() {
@@ -77,8 +77,14 @@ export function processFrame() {
 			}
 		}
 		if (bestDetection[4] > confidenceThreshold && bestDetection[5] in data) {
-			// TODO: do something with the result
-			console.log(data[bestDetection[5]]);
+			// update overlay to match detection bounding box
+			overlay.style.visibility = 'visible';
+			overlay.style.left = ((bestDetection[0] / 640) * 100) / 2 + '%';
+			overlay.style.top = ((bestDetection[1] / 640) * 100) / 2 + '%';
+			overlay.style.width = (bestDetection[2] / 640) * 100 + '%';
+			overlay.style.height = (bestDetection[3] / 640) * 100 + '%';
+		} else {
+			overlay.style.visibility = 'hidden';
 		}
 	});
 
