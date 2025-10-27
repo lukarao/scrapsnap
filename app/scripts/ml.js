@@ -1,5 +1,7 @@
 import data from '../data/data.json' with { type: 'json' };
 
+import { updateIcons } from './icons.js';
+
 import {
 	env,
 	InferenceSession,
@@ -52,8 +54,16 @@ const video = document.getElementById('video');
 const ctx = document
 	.getElementById('canvas')
 	.getContext('2d', { willReadFrequently: true });
+
 const overlay = document.getElementById('overlay');
+
+const card = document.getElementById('card');
+const cardIcon = document.getElementById('card-icon');
+const cardContent = document.getElementById('card-content');
+
 const confidenceThreshold = 0.7;
+
+let detection = false
 
 export function processFrame() {
 	// capture video frame and scale/crop to 640x640
@@ -83,8 +93,24 @@ export function processFrame() {
 			overlay.style.top = ((bestDetection[1] / 640) * 100) / 2 + '%';
 			overlay.style.width = (bestDetection[2] / 640) * 100 + '%';
 			overlay.style.height = (bestDetection[3] / 640) * 100 + '%';
+
+			// if first time detecting, update card to match detection data
+			if (!detection) {
+				card.style.opacity = 1;
+				const detectionData = data[bestDetection[5]];
+				cardIcon.innerHTML = `<i data-lucide="${detectionData.icon}"></i>`;
+				cardContent.innerHTML = `
+					<h2>${detectionData.name}</h2>
+					<h3>${detectionData.type}</h3>
+				`;
+				updateIcons();
+			}
+
+			detection = true;
 		} else {
 			overlay.style.visibility = 'hidden';
+			card.style.opacity = 0;
+			detection = false;
 		}
 	});
 

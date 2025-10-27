@@ -1,21 +1,5 @@
+import { updateIcons } from './icons.js';
 import { processFrame } from './ml.js';
-
-import {
-	createIcons,
-	Flashlight,
-	FlashlightOff,
-	RefreshCw,
-	Menu,
-} from 'https://cdn.jsdelivr.net/npm/lucide/+esm';
-
-const icons = {
-	icons: {
-		Flashlight,
-		FlashlightOff,
-		RefreshCw,
-		Menu,
-	},
-};
 
 // camera functionality
 const video = document.getElementById('video');
@@ -39,14 +23,10 @@ const flashlight = document.getElementById('flashlight');
 let torch = false;
 
 function updateFlashlightButton() {
-	if (torch) {
-		flashlight.innerHTML =
-			'<i data-lucide="flashlight-off" class="button"></i>';
-		createIcons(icons);
-	} else {
-		flashlight.innerHTML = '<i data-lucide="flashlight" class="button"></i>';
-		createIcons(icons);
-	}
+	flashlight.innerHTML = `<i data-lucide="${
+		torch ? 'flashlight-off' : 'flashlight'
+	}" class="button"></i>`;
+	updateIcons();
 }
 
 document.getElementById('flashlight').addEventListener('click', () => {
@@ -78,5 +58,5 @@ document.getElementById('menu').addEventListener('click', () => {
 });
 
 // initialization
-createIcons(icons);
+updateIcons();
 getCamera(facingMode);
