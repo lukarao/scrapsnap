@@ -1,3 +1,5 @@
+import data from '../data/data.json' with { type: 'json' };
+
 import {
 	env,
 	InferenceSession,
@@ -5,9 +7,12 @@ import {
 } from 'https://cdn.jsdelivr.net/npm/onnxruntime-web/+esm';
 env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/';
 
-const session = await InferenceSession.create('../ml/models/final/v3.onnx', {
-	executionProviders: ['wasm'],
-});
+const session = await InferenceSession.create(
+	'../ml/models/final/v3_nms.onnx',
+	{
+		executionProviders: ['wasm'],
+	}
+);
 
 const video = document.getElementById('video');
 const ctx = document
@@ -48,6 +53,8 @@ function imageDataToTensor(image, dims) {
 	return inputTensor;
 }
 
+const confidenceThreshold = 0.7;
+
 export function processFrame() {
 	// capture video frame and scale/crop to 640x640
 	const scaledHeight = video.videoHeight * (640 / video.videoWidth);
@@ -59,8 +66,21 @@ export function processFrame() {
 
 	// run inference
 	session.run({ images: inputTensor }).then((results) => {
-		console.log(results.output0.cpuData);
-		// TODO: interpret results
+		// detection format: [x, y, w, h, conf, label]
+
+		// get best detection
+		let bestDetection = results.output0.cpuData.slice(0, 6);
+		for (let i = 6; i < 1800; i += 6) {
+			const detection = results.output0.cpuData.slice(i, i + 6);
+			if (detection[4] > bestDetection[4]) {
+				bestDetection = detection;
+			}
+		}
+		if (bestDetection[4] > confidenceThreshold && bestDetection[5] in data) {
+			// TODO: do something with the result
+			console.log(data[bestDetection[5]]);
+		}
 	});
+
 	video.requestVideoFrameCallback(processFrame);
 }
