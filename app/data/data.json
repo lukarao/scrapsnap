@@ -1,66 +1,149 @@
 {
-	"0": { "name": "Aluminium foil" },
-	"1": { "name": "Battery" },
-	"2": { "name": "Aluminium blister packet" },
-	"3": { "name": "Carded blister pack" },
-	"4": { "name": "Other plastic bottle" },
+	"0": {
+		"name": "Aluminium foil",
+		"icon": "scroll",
+		"type": "Recyclable"
+	},
+	"1": { "name": "Battery", "icon": "battery-medium", "type": "Hazardous" },
+	"2": {
+		"name": "Aluminium blister packet",
+		"icon": "pill",
+		"type": "Recyclable"
+	},
+	"3": {
+		"name": "Carded blister pack",
+		"icon": "pill",
+		"type": "Recyclable"
+	},
+	"4": {
+		"name": "Plastic bottle",
+		"icon": "bottle-plastic",
+		"type": "Recyclable"
+	},
 	"5": {
 		"name": "Clear plastic bottle",
 		"icon": "bottle-plastic",
 		"type": "Recyclable"
 	},
-	"6": { "name": "Glass bottle" },
-	"7": { "name": "Plastic bottle cap" },
-	"8": { "name": "Metal bottle cap" },
-	"9": { "name": "Broken glass" },
-	"10": { "name": "Food can" },
-	"11": { "name": "Aerosol" },
-	"12": { "name": "Drink can" },
-	"13": { "name": "Toilet tube" },
-	"14": { "name": "Other carton" },
-	"15": { "name": "Egg carton" },
-	"16": { "name": "Drink carton" },
-	"17": { "name": "Corrugated carton" },
-	"18": { "name": "Meal carton" },
-	"19": { "name": "Pizza box" },
-	"20": { "name": "Paper cup" },
-	"21": { "name": "Disposable plastic cup" },
-	"22": { "name": "Foam cup" },
-	"23": { "name": "Glass cup" },
-	"24": { "name": "Other plastic cup" },
-	"25": { "name": "Food waste" },
-	"26": { "name": "Glass jar" },
-	"27": { "name": "Plastic lid" },
-	"28": { "name": "Metal lid" },
-	"29": { "name": "Other plastic" },
-	"30": { "name": "Magazine paper" },
-	"31": { "name": "Tissues" },
-	"32": { "name": "Wrapping paper" },
-	"33": { "name": "Normal paper" },
-	"34": { "name": "Paper bag" },
-	"35": { "name": "Plastified paper bag" },
-	"36": { "name": "Plastic film" },
-	"37": { "name": "Six pack rings" },
-	"38": { "name": "Garbage bag" },
-	"39": { "name": "Other plastic wrapper" },
-	"40": { "name": "Single-use carrier bag" },
-	"41": { "name": "Polypropylene bag" },
-	"42": { "name": "Crisp packet" },
-	"43": { "name": "Spread tub" },
-	"44": { "name": "Tupperware" },
-	"45": { "name": "Disposable food container" },
-	"46": { "name": "Foam food container" },
-	"47": { "name": "Other plastic container" },
-	"48": { "name": "Plastic gloves" },
-	"49": { "name": "Plastic utensils" },
-	"50": { "name": "Pop tab" },
-	"51": { "name": "Rope & strings" },
-	"52": { "name": "Scrap metal" },
-	"53": { "name": "Shoe" },
-	"54": { "name": "Squeezable tube" },
-	"55": { "name": "Plastic straw" },
-	"56": { "name": "Paper straw" },
-	"57": { "name": "Styrofoam piece" },
-	"58": { "name": "Unlabeled litter" },
-	"59": { "name": "Cigarette" }
+	"6": { "name": "Glass bottle", "icon": "milk", "type": "Recyclable" },
+	"7": {
+		"name": "Plastic bottle cap",
+		"icon": "circle-slash",
+		"type": "Recyclable"
+	},
+	"8": {
+		"name": "Metal bottle cap",
+		"icon": "circle-slash",
+		"type": "Recyclable"
+	},
+	"9": {
+		"name": "Broken glass",
+		"icon": "triangle-dashed",
+		"type": "Hazardous"
+	},
+	"10": { "name": "Food can", "icon": "cylinder", "type": "Recyclable" },
+	"11": { "name": "Aerosol", "icon": "spray-can", "type": "Hazardous" },
+	"12": { "name": "Drink can", "icon": "cup-soda", "type": "Recyclable" },
+	"13": { "name": "Toilet tube", "icon": "cylinder", "type": "Recyclable" },
+	"14": { "name": "Carton", "icon": "package", "type": "Recyclable" },
+	"15": { "name": "Egg carton", "icon": "egg", "type": "Compostable" },
+	"16": { "name": "Drink carton", "icon": "carton", "type": "Recyclable" },
+	"17": {
+		"name": "Corrugated carton",
+		"icon": "package",
+		"type": "Recyclable"
+	},
+	"18": { "name": "Meal carton", "icon": "package-2", "type": "Recyclable" },
+	"19": { "name": "Pizza box", "icon": "pizza", "type": "Compostable" },
+	"20": { "name": "Paper cup", "icon": "cup-to-go", "type": "Recyclable" },
+	"21": {
+		"name": "Disposable plastic cup",
+		"icon": "cup-soda",
+		"type": "Recyclable"
+	},
+	"22": { "name": "Foam cup", "icon": "cup-soda", "type": "Landfill" },
+	"23": { "name": "Glass cup", "icon": "glass-water", "type": "Recyclable" },
+	"24": {
+		"name": "Other plastic cup",
+		"icon": "cup-soda",
+		"type": "Recyclable"
+	},
+	"25": { "name": "Food waste", "icon": "apple-core", "type": "Compostable" },
+	"26": { "name": "Glass jar", "icon": "jar", "type": "Recyclable" },
+	"27": { "name": "Plastic lid", "icon": "circle-slash", "type": "Recyclable" },
+	"28": { "name": "Metal lid", "icon": "circle-slash", "type": "Recyclable" },
+	"29": { "name": "Plastic", "icon": "shapes", "type": "Recyclable" },
+	"30": { "name": "Magazine paper", "icon": "newspaper", "type": "Recyclable" },
+	"31": { "name": "Tissues", "icon": "sticky-note", "type": "Compostable" },
+	"32": {
+		"name": "Wrapping paper",
+		"icon": "sticky-note",
+		"type": "Recyclable"
+	},
+	"33": { "name": "Paper", "icon": "sticky-note", "type": "Recyclable" },
+	"34": { "name": "Paper bag", "icon": "shopping-bag", "type": "Recyclable" },
+	"35": {
+		"name": "Plastified paper bag",
+		"icon": "shopping-bag",
+		"type": "Landfill"
+	},
+	"36": { "name": "Plastic film", "icon": "scroll", "type": "Recyclable" },
+	"37": { "name": "Six pack rings", "icon": "link", "type": "Recyclable" },
+	"38": { "name": "Garbage bag", "icon": "shopping-bag", "type": "Landfill" },
+	"39": {
+		"name": "Plastic wrapper",
+		"icon": "candy",
+		"type": "Recyclable"
+	},
+	"40": {
+		"name": "Single-use carrier bag",
+		"icon": "shopping-bag",
+		"type": "Recyclable"
+	},
+	"41": {
+		"name": "Polypropylene bag",
+		"icon": "shopping-bag",
+		"type": "Recyclable"
+	},
+	"42": { "name": "Chip bag", "icon": "shopping-bag", "type": "Landfill" },
+	"43": { "name": "Spread tub", "icon": "cuboid", "type": "Recyclable" },
+	"44": { "name": "Tupperware", "icon": "meal-box", "type": "Recyclable" },
+	"45": {
+		"name": "Disposable food container",
+		"icon": "takeaway",
+		"type": "Recyclable"
+	},
+	"46": {
+		"name": "Foam food container",
+		"icon": "archive",
+		"type": "Landfill"
+	},
+	"47": {
+		"name": "Plastic container",
+		"icon": "archive",
+		"type": "Recyclable"
+	},
+	"48": { "name": "Plastic gloves", "icon": "hand", "type": "Landfill" },
+	"49": {
+		"name": "Plastic utensils",
+		"icon": "utensils-crossed",
+		"type": "Landfill"
+	},
+	"50": { "name": "Pop tab", "icon": "unlink-2", "type": "Recyclable" },
+	"51": {
+		"name": "Rope & string",
+		"icon": "line-squiggle",
+		"type": "Landfill"
+	},
+	"52": {
+		"name": "Scrap metal",
+		"icon": "inspection-panel",
+		"type": "Recyclable"
+	},
+	"53": { "name": "Shoe", "icon": "footprints", "type": "Landfill" },
+	"54": { "name": "Squeezable tube", "icon": "test-tube", "type": "Landfill" },
+	"55": { "name": "Plastic straw", "icon": "slash", "type": "Landfill" },
+	"56": { "name": "Paper straw", "icon": "slash", "type": "Compostable" },
+	"57": { "name": "Styrofoam piece", "icon": "cuboid", "type": "Landfill" },
+	"59": { "name": "Cigarette", "icon": "cigarette", "type": "Landfill" }
 }
