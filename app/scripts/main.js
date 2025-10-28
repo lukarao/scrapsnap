@@ -1,3 +1,6 @@
+import data from '../data/data.json' with { type: 'json' };
+
+import { card } from './card.js';
 import { updateIcons } from './icons.js';
 import { processFrame, mlStop, mlResume } from './ml.js';
 
@@ -68,6 +71,37 @@ document.getElementById('menu-close').addEventListener('click', () => {
 		mlResume();
 	}, 500);
 });
+
+const menuList = document.getElementById('menu-list');
+
+const sortedValues = Object.values(data).sort((a, b) =>
+	a.name.localeCompare(b.name)
+);
+for (const value of sortedValues) {
+	card(menuList, value, 'menu-card');
+}
+
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('keyup', () => {
+	for (const card of menuList.children) {
+		if (
+			card
+				.querySelector('h2')
+				.textContent.toLowerCase()
+				.includes(searchInput.value.toLowerCase())
+		) {
+			card.style.display = 'flex';
+		} else {
+			card.style.display = 'none';
+		}
+	}
+});
+
+// result
+window.openResult = function (data) {
+	// TODO: add result code
+	console.log(data);
+};
 
 // initialization
 updateIcons();

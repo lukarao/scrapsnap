@@ -1,6 +1,6 @@
 import data from '../data/data.json' with { type: 'json' };
 
-import { updateIcons } from './icons.js';
+import { card } from './card.js';
 
 import {
 	env,
@@ -57,11 +57,7 @@ const ctx = document
 
 const overlay = document.getElementById('overlay');
 
-const card = document.getElementById('card');
-const cardIcon = document.getElementById('card-icon');
-const cardContent = document.getElementById('card-content');
-
-const confidenceThreshold = 0.7;
+const confidenceThreshold = -1;
 
 let detection = false;
 let stopped = false;
@@ -97,20 +93,15 @@ export function processFrame() {
 
 			// if first time detecting, update card to match detection data
 			if (!detection) {
-				card.style.opacity = 1;
-				const detectionData = data[bestDetection[5]];
-				cardIcon.innerHTML = `<i data-lucide="${detectionData.icon}"></i>`;
-				cardContent.innerHTML = `
-					<h2>${detectionData.name}</h2>
-					<h3>${detectionData.type}</h3>
-				`;
-				updateIcons();
+				card(document.body, data[bestDetection[5]], 'main-card');
 			}
 
 			detection = true;
 		} else {
-			overlay.style.visibility = 'hidden';
-			card.style.opacity = 0;
+			if (detection) {
+				overlay.style.visibility = 'hidden';
+				document.getElementById('card').remove();
+			}
 			detection = false;
 		}
 	});

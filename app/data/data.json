@@ -64,7 +64,7 @@
 	"22": { "name": "Foam cup", "icon": "cup-soda", "type": "Landfill" },
 	"23": { "name": "Glass cup", "icon": "glass-water", "type": "Recyclable" },
 	"24": {
-		"name": "Other plastic cup",
+		"name": "Plastic cup",
 		"icon": "cup-soda",
 		"type": "Recyclable"
 	},
@@ -110,7 +110,7 @@
 	"44": { "name": "Tupperware", "icon": "meal-box", "type": "Recyclable" },
 	"45": {
 		"name": "Disposable food container",
-		"icon": "takeaway",
+		"icon": "archive",
 		"type": "Recyclable"
 	},
 	"46": {
