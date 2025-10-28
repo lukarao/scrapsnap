@@ -63,7 +63,8 @@ const cardContent = document.getElementById('card-content');
 
 const confidenceThreshold = 0.7;
 
-let detection = false
+let detection = false;
+let stopped = false;
 
 export function processFrame() {
 	// capture video frame and scale/crop to 640x640
@@ -114,5 +115,16 @@ export function processFrame() {
 		}
 	});
 
+	if (!stopped) {
+		video.requestVideoFrameCallback(processFrame);
+	}
+}
+
+export function mlStop() {
+	stopped = true;
+}
+
+export function mlResume() {
+	stopped = false;
 	video.requestVideoFrameCallback(processFrame);
 }

@@ -1,5 +1,5 @@
 import { updateIcons } from './icons.js';
-import { processFrame } from './ml.js';
+import { processFrame, mlStop, mlResume } from './ml.js';
 
 // camera functionality
 const video = document.getElementById('video');
@@ -52,9 +52,21 @@ document.getElementById('flip').addEventListener('click', () => {
 	});
 });
 
-// menu button
-document.getElementById('menu').addEventListener('click', () => {
-	// TODO: add menu button functionality
+// menu
+const menu = document.getElementById('menu');
+
+document.getElementById('menu-open').addEventListener('click', () => {
+	mlStop();
+	setTimeout(() => {
+		menu.style.left = '0%';
+	}, 100);
+});
+
+document.getElementById('menu-close').addEventListener('click', () => {
+	menu.style.left = '100%';
+	setTimeout(() => {
+		mlResume();
+	}, 500);
 });
 
 // initialization

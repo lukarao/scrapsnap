@@ -19,11 +19,12 @@
 	</head>
 
 	<body>
+		<!-- camera -->
 		<div id="video-container">
 			<video id="video" playsinline></video>
 		</div>
 		<canvas id="canvas" width="640" height="640" hidden></canvas>
-		<div id="card">
+		<button id="card">
 			<div id="card-icon">
 				<!-- <i data-lucide="{icon}"></i> -->
 			</div>
@@ -31,10 +32,10 @@
 				<!-- <h2>{name}</h2> -->
 				<!-- <h3>{type}</h3> -->
 			</div>
-			<button id="card-link">
+			<div id="card-link">
 				<i data-lucide="chevron-right"></i>
-			</button>
-		</div>
+			</div>
+		</button>
 		<div id="overlay-container">
 			<div id="overlay"></div>
 		</div>
@@ -45,9 +46,29 @@
 			<button id="flip">
 				<i data-lucide="refresh-cw"></i>
 			</button>
-			<button id="menu">
+			<button id="menu-open">
 				<i data-lucide="menu"></i>
 			</button>
+		</div>
+
+		<!-- menu -->
+		<div id="menu">
+			<button id="menu-close">
+				<i data-lucide="chevron-left"></i>
+			</button>
+			<div>
+				<div id="search">
+					<i data-lucide="search"></i>
+					<input
+						type="text"
+						id="search-input"
+						placeholder="Search the trash database"
+					/>
+				</div>
+				<div id="menu-list">
+					<!-- <button class="card" onclick="getResult({res})"></button> -->
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
