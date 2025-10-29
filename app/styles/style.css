@@ -35,7 +35,7 @@ body {
 .card {
 	color: #000;
 	background-color: #fff;
-	border: none;
+	border: 1px solid rgb(90%, 90%, 90%);
 	border-radius: 15vmin;
 	box-shadow: 0 0 1vmin rgba(0, 0, 0, 25%);
 
@@ -162,10 +162,10 @@ body {
 	height: 80%;
 }
 
-/* menu */
-#menu {
-	z-index: 2;
+/* menu and result */
 
+#menu,
+#result {
 	position: absolute;
 	top: 0;
 	left: 100%;
@@ -180,7 +180,16 @@ body {
 	overflow-y: scroll;
 }
 
-#menu-close {
+#menu {
+	z-index: 2;
+}
+
+#result {
+	z-index: 3;
+}
+
+#menu-close,
+#result-close {
 	position: absolute;
 	top: 15vmin;
 	left: 5vmin;
@@ -191,17 +200,21 @@ body {
 
 	background: none;
 	border: none;
-	color: rgb(70%, 70%, 70%);
+	color: #000;
 }
 
-#menu-close svg {
+#menu-close svg,
+#result-close svg {
 	width: 10vmin;
 	height: 10vmin;
 }
 
-#menu > div {
+#menu > div,
+#result > div {
 	padding: 30vmin 8vmin 0 8vmin;
 }
+
+/* menu search */
 
 #search {
 	display: flex;
@@ -229,3 +242,5 @@ body {
 	outline: none;
 	background: none;
 }
+
+/* result */

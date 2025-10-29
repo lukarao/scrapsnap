@@ -57,7 +57,7 @@ const ctx = document
 
 const overlay = document.getElementById('overlay');
 
-const confidenceThreshold = -1;
+const confidenceThreshold = 0.7;
 
 let detection = false;
 let stopped = false;
@@ -100,7 +100,7 @@ export function processFrame() {
 		} else {
 			if (detection) {
 				overlay.style.visibility = 'hidden';
-				document.getElementById('card').remove();
+				document.querySelector('.main-card').remove();
 			}
 			detection = false;
 		}
@@ -112,10 +112,12 @@ export function processFrame() {
 }
 
 export function mlStop() {
+	console.log('stop')
 	stopped = true;
 }
 
 export function mlResume() {
+	console.log('resume')
 	stopped = false;
 	video.requestVideoFrameCallback(processFrame);
 }

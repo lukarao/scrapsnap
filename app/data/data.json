@@ -2,148 +2,532 @@
 	"0": {
 		"name": "Aluminium foil",
 		"icon": "scroll",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 300,
+		"footprint": 0.3,
+		"material": "Aluminum"
 	},
-	"1": { "name": "Battery", "icon": "battery-medium", "type": "Hazardous" },
+	"1": {
+		"name": "Battery",
+		"icon": "battery-medium",
+		"type": "Hazardous",
+		"method": "Hazardous waste facility",
+		"decomposition": 100,
+		"footprint": 1.0,
+		"material": "Metal, chemicals"
+	},
 	"2": {
 		"name": "Aluminium blister packet",
 		"icon": "pill",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 300,
+		"footprint": 0.05,
+		"material": "Aluminum, plastic"
 	},
 	"3": {
 		"name": "Carded blister pack",
 		"icon": "pill",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 300,
+		"footprint": 0.1,
+		"material": "Plastic, cardboard"
 	},
 	"4": {
 		"name": "Plastic bottle",
 		"icon": "bottle-plastic",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 700,
+		"footprint": 0.28,
+		"material": "PET plastic"
 	},
 	"5": {
 		"name": "Clear plastic bottle",
 		"icon": "bottle-plastic",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 700,
+		"footprint": 0.28,
+		"material": "PET plastic"
 	},
-	"6": { "name": "Glass bottle", "icon": "milk", "type": "Recyclable" },
+	"6": {
+		"name": "Glass bottle",
+		"icon": "milk",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 1000000,
+		"footprint": 1.3,
+		"material": "Glass"
+	},
 	"7": {
 		"name": "Plastic bottle cap",
 		"icon": "circle-slash",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 800,
+		"footprint": 0.05,
+		"material": "HDPE or PP plastic"
 	},
 	"8": {
 		"name": "Metal bottle cap",
 		"icon": "circle-slash",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 300,
+		"footprint": 0.1,
+		"material": "Aluminum or steel"
 	},
 	"9": {
 		"name": "Broken glass",
 		"icon": "triangle-dashed",
-		"type": "Hazardous"
+		"type": "Landfill",
+		"method": "Properly contain, then send to landfill",
+		"decomposition": 1000000,
+		"footprint": 0.4,
+		"material": "Glass"
 	},
-	"10": { "name": "Food can", "icon": "cylinder", "type": "Recyclable" },
-	"11": { "name": "Aerosol", "icon": "spray-can", "type": "Hazardous" },
-	"12": { "name": "Drink can", "icon": "cup-soda", "type": "Recyclable" },
-	"13": { "name": "Toilet tube", "icon": "cylinder", "type": "Recyclable" },
-	"14": { "name": "Carton", "icon": "package", "type": "Recyclable" },
-	"15": { "name": "Egg carton", "icon": "egg", "type": "Compostable" },
-	"16": { "name": "Drink carton", "icon": "carton", "type": "Recyclable" },
+	"10": {
+		"name": "Food can",
+		"icon": "cylinder",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 70,
+		"footprint": 0.2,
+		"material": "Steel or aluminum"
+	},
+	"11": {
+		"name": "Aerosol",
+		"icon": "spray-can",
+		"type": "Hazardous",
+		"method": "Hazardous waste facility",
+		"decomposition": 100,
+		"footprint": 0.3,
+		"material": "Steel, aluminum, chemicals"
+	},
+	"12": {
+		"name": "Drink can",
+		"icon": "cup-soda",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 300,
+		"footprint": 0.2,
+		"material": "Aluminum"
+	},
+	"13": {
+		"name": "Toilet tube",
+		"icon": "cylinder",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Cardboard"
+	},
+	"14": {
+		"name": "Carton",
+		"icon": "package",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Paperboard"
+	},
+	"15": {
+		"name": "Egg carton",
+		"icon": "egg",
+		"type": "Compostable",
+		"method": "Compost",
+		"decomposition": 1,
+		"footprint": 0.03,
+		"material": "Paper pulp"
+	},
+	"16": {
+		"name": "Drink carton",
+		"icon": "carton",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 5,
+		"footprint": 0.05,
+		"material": "Paperboard, plastic"
+	},
 	"17": {
 		"name": "Corrugated carton",
 		"icon": "package",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Cardboard"
 	},
-	"18": { "name": "Meal carton", "icon": "package-2", "type": "Recyclable" },
-	"19": { "name": "Pizza box", "icon": "pizza", "type": "Compostable" },
-	"20": { "name": "Paper cup", "icon": "cup-to-go", "type": "Recyclable" },
+	"18": {
+		"name": "Meal carton",
+		"icon": "package-2",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Cardboard, plastic"
+	},
+	"19": {
+		"name": "Pizza box",
+		"icon": "pizza",
+		"type": "Compostable",
+		"method": "Compost",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Cardboard"
+	},
+	"20": {
+		"name": "Paper cup",
+		"icon": "cup-to-go",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 20,
+		"footprint": 0.11,
+		"material": "Paper, plastic"
+	},
 	"21": {
 		"name": "Disposable plastic cup",
 		"icon": "cup-soda",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 700,
+		"footprint": 0.1,
+		"material": "PET or PP plastic"
 	},
-	"22": { "name": "Foam cup", "icon": "cup-soda", "type": "Landfill" },
-	"23": { "name": "Glass cup", "icon": "glass-water", "type": "Recyclable" },
+	"22": {
+		"name": "Foam cup",
+		"icon": "cup-soda",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 500,
+		"footprint": 0.25,
+		"material": "Polystyrene"
+	},
+	"23": {
+		"name": "Glass cup",
+		"icon": "glass-water",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 1000000,
+		"footprint": 0.4,
+		"material": "Glass"
+	},
 	"24": {
 		"name": "Plastic cup",
 		"icon": "cup-soda",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 800,
+		"footprint": 0.1,
+		"material": "PET or PP plastic"
 	},
-	"25": { "name": "Food waste", "icon": "apple-core", "type": "Compostable" },
-	"26": { "name": "Glass jar", "icon": "jar", "type": "Recyclable" },
-	"27": { "name": "Plastic lid", "icon": "circle-slash", "type": "Recyclable" },
-	"28": { "name": "Metal lid", "icon": "circle-slash", "type": "Recyclable" },
-	"29": { "name": "Plastic", "icon": "shapes", "type": "Recyclable" },
-	"30": { "name": "Magazine paper", "icon": "newspaper", "type": "Recyclable" },
-	"31": { "name": "Tissues", "icon": "sticky-note", "type": "Compostable" },
+	"25": {
+		"name": "Food waste",
+		"icon": "apple-core",
+		"type": "Compostable",
+		"method": "Compost",
+		"decomposition": 1,
+		"footprint": 0.6,
+		"material": "Organic matter"
+	},
+	"26": {
+		"name": "Glass jar",
+		"icon": "jar",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 1000000,
+		"footprint": 0.5,
+		"material": "Glass"
+	},
+	"27": {
+		"name": "Plastic lid",
+		"icon": "circle-slash",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 800,
+		"footprint": 0.05,
+		"material": "HDPE or PP plastic"
+	},
+	"28": {
+		"name": "Metal lid",
+		"icon": "circle-slash",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 300,
+		"footprint": 0.1,
+		"material": "Aluminum or steel"
+	},
+	"29": {
+		"name": "Plastic",
+		"icon": "shapes",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 700,
+		"footprint": 0.15,
+		"material": "Plastic"
+	},
+	"30": {
+		"name": "Magazine paper",
+		"icon": "newspaper",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.05,
+		"material": "Paper"
+	},
+	"31": {
+		"name": "Tissues",
+		"icon": "sticky-note",
+		"type": "Compostable",
+		"method": "Compost",
+		"decomposition": 1,
+		"footprint": 0.02,
+		"material": "Paper pulp"
+	},
 	"32": {
 		"name": "Wrapping paper",
 		"icon": "sticky-note",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.03,
+		"material": "Paper"
 	},
-	"33": { "name": "Paper", "icon": "sticky-note", "type": "Recyclable" },
-	"34": { "name": "Paper bag", "icon": "shopping-bag", "type": "Recyclable" },
+	"33": {
+		"name": "Paper",
+		"icon": "sticky-note",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.03,
+		"material": "Paper"
+	},
+	"34": {
+		"name": "Paper bag",
+		"icon": "shopping-bag",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 1,
+		"footprint": 0.06,
+		"material": "Paper"
+	},
 	"35": {
 		"name": "Plastified paper bag",
 		"icon": "shopping-bag",
-		"type": "Landfill"
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 15,
+		"footprint": 0.1,
+		"material": "Paper, plastic"
 	},
-	"36": { "name": "Plastic film", "icon": "scroll", "type": "Recyclable" },
-	"37": { "name": "Six pack rings", "icon": "link", "type": "Recyclable" },
-	"38": { "name": "Garbage bag", "icon": "shopping-bag", "type": "Landfill" },
+	"36": {
+		"name": "Plastic film",
+		"icon": "scroll",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 800,
+		"footprint": 0.05,
+		"material": "LDPE plastic"
+	},
+	"37": {
+		"name": "Six pack rings",
+		"icon": "link",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 400,
+		"footprint": 0.03,
+		"material": "LDPE plastic"
+	},
+	"38": {
+		"name": "Garbage bag",
+		"icon": "shopping-bag",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 800,
+		"footprint": 0.05,
+		"material": "LDPE plastic"
+	},
 	"39": {
 		"name": "Plastic wrapper",
 		"icon": "candy",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 500,
+		"footprint": 0.02,
+		"material": "LDPE or PP plastic"
 	},
 	"40": {
 		"name": "Single-use carrier bag",
 		"icon": "shopping-bag",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 800,
+		"footprint": 0.04,
+		"material": "LDPE plastic"
 	},
 	"41": {
 		"name": "Polypropylene bag",
 		"icon": "shopping-bag",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 800,
+		"footprint": 0.05,
+		"material": "PP plastic"
 	},
-	"42": { "name": "Chip bag", "icon": "shopping-bag", "type": "Landfill" },
-	"43": { "name": "Spread tub", "icon": "cuboid", "type": "Recyclable" },
-	"44": { "name": "Tupperware", "icon": "meal-box", "type": "Recyclable" },
+	"42": {
+		"name": "Chip bag",
+		"icon": "shopping-bag",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 100,
+		"footprint": 0.06,
+		"material": "Plastic, aluminum"
+	},
+	"43": {
+		"name": "Spread tub",
+		"icon": "cuboid",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 500,
+		"footprint": 0.1,
+		"material": "PP plastic"
+	},
+	"44": {
+		"name": "Tupperware",
+		"icon": "meal-box",
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 800,
+		"footprint": 0.2,
+		"material": "PP or HDPE plastic"
+	},
 	"45": {
 		"name": "Disposable food container",
 		"icon": "archive",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 800,
+		"footprint": 0.12,
+		"material": "PET or PP plastic"
 	},
 	"46": {
 		"name": "Foam food container",
 		"icon": "archive",
-		"type": "Landfill"
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 500,
+		"footprint": 0.25,
+		"material": "Polystyrene"
 	},
 	"47": {
 		"name": "Plastic container",
 		"icon": "archive",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 700,
+		"footprint": 0.12,
+		"material": "PET or HDPE plastic"
 	},
-	"48": { "name": "Plastic gloves", "icon": "hand", "type": "Landfill" },
+	"48": {
+		"name": "Plastic gloves",
+		"icon": "hand",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 300,
+		"footprint": 0.03,
+		"material": "HDPE plastic, nitrile, vinyl, or latex"
+	},
 	"49": {
 		"name": "Plastic utensils",
 		"icon": "utensils-crossed",
-		"type": "Landfill"
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 500,
+		"footprint": 0.06,
+		"material": "Polystyrene or PP plastic"
 	},
-	"50": { "name": "Pop tab", "icon": "unlink-2", "type": "Recyclable" },
+	"50": {
+		"name": "Pop tab",
+		"icon": "unlink-2",
+		"type": "Recyclable",
+		"method": "Recycle",
+		"decomposition": 300,
+		"footprint": 0.02,
+		"material": "Aluminum"
+	},
 	"51": {
 		"name": "Rope & string",
 		"icon": "line-squiggle",
-		"type": "Landfill"
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 3,
+		"footprint": 0.02,
+		"material": "Cotton, nylon, or synthetic fiber"
 	},
 	"52": {
 		"name": "Scrap metal",
 		"icon": "inspection-panel",
-		"type": "Recyclable"
+		"type": "Recyclable",
+		"method": "Clean and recycle",
+		"decomposition": 250,
+		"footprint": 0.1,
+		"material": "Metal"
 	},
-	"53": { "name": "Shoe", "icon": "footprints", "type": "Landfill" },
-	"54": { "name": "Squeezable tube", "icon": "test-tube", "type": "Landfill" },
-	"55": { "name": "Plastic straw", "icon": "slash", "type": "Landfill" },
-	"56": { "name": "Paper straw", "icon": "slash", "type": "Compostable" },
-	"57": { "name": "Styrofoam piece", "icon": "cuboid", "type": "Landfill" },
-	"59": { "name": "Cigarette", "icon": "cigarette", "type": "Landfill" }
+	"53": {
+		"name": "Shoe",
+		"icon": "footprints",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 30,
+		"footprint": 13.8,
+		"material": "Rubber, leather, synthetic fabric"
+	},
+	"54": {
+		"name": "Squeezable tube",
+		"icon": "test-tube",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 700,
+		"footprint": 0.08,
+		"material": "Plastic laminate or aluminum-plastic composite"
+	},
+	"55": {
+		"name": "Plastic straw",
+		"icon": "slash",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 200,
+		"footprint": 0.02,
+		"material": "PP or polystyrene"
+	},
+	"56": {
+		"name": "Paper straw",
+		"icon": "slash",
+		"type": "Compostable",
+		"method": "Compost",
+		"decomposition": 1,
+		"footprint": 0.01,
+		"material": "Paper"
+	},
+	"57": {
+		"name": "Styrofoam",
+		"icon": "shapes",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 500,
+		"footprint": 0.2,
+		"material": "Polystyrene foam"
+	},
+	"59": {
+		"name": "Cigarette",
+		"icon": "cigarette",
+		"type": "Landfill",
+		"method": "Send to landfill",
+		"decomposition": 10,
+		"footprint": 0.03,
+		"material": "Paper, chemicals"
+	}
 }
