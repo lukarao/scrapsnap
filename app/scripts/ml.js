@@ -57,7 +57,7 @@ const ctx = document
 
 const overlay = document.getElementById('overlay');
 
-const confidenceThreshold = 0.7;
+const confidenceThreshold = 0.6;
 
 let detection = false;
 let stopped = false;
