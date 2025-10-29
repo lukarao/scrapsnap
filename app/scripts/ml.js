@@ -112,12 +112,10 @@ export function processFrame() {
 }
 
 export function mlStop() {
-	console.log('stop')
 	stopped = true;
 }
 
 export function mlResume() {
-	console.log('resume')
 	stopped = false;
 	video.requestVideoFrameCallback(processFrame);
 }

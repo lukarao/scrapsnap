@@ -220,7 +220,7 @@ body {
 	display: flex;
 	align-items: center;
 
-	border-radius: 1000vmin;
+	border-radius: 9999px;
 
 	background-color: rgba(0, 0, 0, 7%);
 }
@@ -244,3 +244,44 @@ body {
 }
 
 /* result */
+
+#result-title {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 8vmin;
+}
+
+#result-title h2 {
+	font-size: 6vmin;
+
+	flex: 1;
+}
+
+#result-title svg {
+	width: 8vmin;
+	height: 8vmin;
+}
+
+.result-box {
+	margin: 5vw 0;
+	padding: 5vmin;
+
+	border-radius: 5vw;
+	box-shadow: 0 0 1vmin rgba(0, 0, 0, 25%);
+}
+
+.result-box h3 {
+	font-size: 6vmin;
+
+	margin-bottom: 4vmin;
+}
+
+.result-box h4,
+span {
+	font-size: 5vmin;
+}
+
+.result-box h4 {
+	margin-top: 2vmin;
+}
